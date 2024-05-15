@@ -1,6 +1,6 @@
 name: Backend Continuous Integration
 
-run:
+on:
   pull_request:
     branches:
       - main

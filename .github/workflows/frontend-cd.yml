@@ -1,0 +1,57 @@
+name: Frontend Continuous Deployment
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'starter/frontend/**'
+    workflow_dispatch:
+
+jobs:
+  linting-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check the repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
+
+      - name: Install dependency
+        run: |
+          cd stater/frontend
+          npm install
+
+      - name: Run linting-job
+        run: |
+          cd starter/frontend
+          npm run lint
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check the repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node environment
+        uses: actions/setup-node@v3
+        with:
+          node-version: latest
+
+      - name: Install dependency
+        run: |
+          cd stater/frontend
+          npm install
+
+      - name: Run test
+        run: |
+          cd starter/frontend
+          npm run test
+
+
+
