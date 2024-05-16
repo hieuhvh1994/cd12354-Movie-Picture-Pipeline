@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependency
         run: |
-          cd stater/frontend
+          cd starter/frontend
           npm install
 
       - name: Run linting-job
@@ -45,7 +45,7 @@ jobs:
 
       - name: Install dependency
         run: |
-          cd stater/frontend
+          cd starter/frontend
           npm install
 
       - name: Run test

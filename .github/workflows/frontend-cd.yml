@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - 'starter/frontend/**'
-    workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   linting-job:
@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependency
         run: |
-          cd stater/frontend
+          cd starter/frontend
           npm install
 
       - name: Run linting-job
@@ -45,7 +45,7 @@ jobs:
 
       - name: Install dependency
         run: |
-          cd stater/frontend
+          cd starter/frontend
           npm install
 
       - name: Run test
@@ -68,7 +68,7 @@ jobs:
 
       - name: Install dependency
         run: |
-          cd stater/frontend
+          cd starter/frontend
           npm install
 
       - name: Set up Docker Buildx
